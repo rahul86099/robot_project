@@ -28,5 +28,13 @@ TC2
   Log To Console    ${alert_text}
   Should Be Equal    ${alert_text}    Please enter the total revenue greater than ZERO.
 
+TC3
+  Open Browser    browser=chrome
+  Maximize Browser Window
+  Set Selenium Implicit Wait    15s
+  Go To    url=https://nasscom.in/
+  ${ele}  Get WebElement    xpath=//a[text()='Members Listing']
+  Execute Javascript  arguments[0].click()  ARGUMENTS  ${ele}
+
 
 

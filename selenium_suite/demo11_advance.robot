@@ -20,3 +20,27 @@ TC3
   Input Text    css=#email    jack
   Input Text    css=#pass    pass123
   Click Element    css=button[name='login']
+
+TC4 Javascript
+  Open Browser  browser=chrome
+  Maximize Browser Window
+  Go To    https://phptravels.net/
+  #select the city as vadodara
+  #Execute Javascript  document.querySelector('#select2-hotels_city-container').value='Vadodara,India'
+  Click Element    select2-hotels_city-container
+  Input Text    xpath=Vadodara,India
+  #Input text id=checkin 31-10-2023
+  Execute Javascript  document.querySelector('#checkin').value='31-10-2023'
+  Sleep    4s
+  #Input text id=checkin 29-11-2023
+  Execute Javascript  document.querySelector('#checkout').value='29-11-2023'
+
+TC5
+  Open Browser  browser=chrome
+  Maximize Browser Window
+  Go To    https://www.redbus.in/
+  Input Text    id=src    Central Bus Station, Vadodara
+  Input Text    dest    Delhi Darwaja, Ahmedabad
+  Click Element    rb-calendar_onward_cal
+  Select From List By Label    rb-calendar_onward_cal  27
+
