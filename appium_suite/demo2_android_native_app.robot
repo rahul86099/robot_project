@@ -31,6 +31,7 @@ TC1 Sign Up
 
   Wait Until Page Contains Element    xpath=//android.widget.TextView[@text='Birthday']  30s
   Click Element    xpath=//android.widget.TextView[@text='Birthday']
+
   Wait Until Page Contains Element    xpath=//android.widget.EditText[@resource-id='android:id/numberpicker_input']
   Click Element    xpath=(//android.widget.EditText[@resource-id='android:id/numberpicker_input'])[1]
   Clear Text    xpath=//(android.widget.EditText[@resource-id='android:id/numberpicker_input'])[1]
