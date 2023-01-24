@@ -44,3 +44,11 @@ TC5
   Click Element    rb-calendar_onward_cal
   Select From List By Label    rb-calendar_onward_cal  27
 
+TC6 Checking error
+  Open Browser  browser=chrome
+  @{output}  Run Keyword And Ignore Error    Click Element    xpath=//a
+  Log To Console    ${output}
+  Log To Console    ${output}[0]
+  Log To Console    ${output}[1]
+  Log   ${output}
+

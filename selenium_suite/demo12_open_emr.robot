@@ -19,7 +19,7 @@ TC1
    Input Text    form_fname    Rahul
    Input Text    form_lname    yadav
    Click Element    form_DOB
-   Input Text    form_DOB    24/01/2023
+   Run Keyword And Ignore Error  Input Text    form_DOB    24/01/2023
    Click Element    form_sex
    Click Element    xpath=//option[text()='Male']
    Click Element    create
