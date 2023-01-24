@@ -63,3 +63,34 @@ TC1 Swipe
   Element Should Contain Text    android=UiSelector().textContains("Invalid password")    Invalid password
 
   [Teardown]  Close Application
+
+TC2
+  Open Application    remote_url=http://localhost:4723/wd/hub
+  ...  platformName=android
+  ...  deviceName=samsung
+#  ...  app=C:\\Users\\40032436\\Components${/}khan-academy-7-3-2.apk
+  ...  appActivity=org.khanacademy.android.ui.library.MainActivity
+  ...  appPackage=org.khanacademy.android
+  ...  noReset=true
+
+  Sleep    15s
+  Run Keyword And Ignore Error  Wait Until Page Contains Element    xpath=//*[@text='Dismiss']     30s
+  Run Keyword And Ignore Error  Click Element    xpath=//*[@text='Dismiss']
+
+  Wait Until Page Contains Element    xpath=//android.widget.Button[@text='Search']  30s
+  Click Element    xpath=//android.widget.Button[@text='Search']
+
+  Wait Until Page Contains Element    xpath=//android.widget.TextView[@text='Arts and humanities']  30s
+  Click Element    xpath=//android.widget.TextView[@text='Arts and humanities']
+
+
+  &{dic_arg}  Create Dictionary  strategy=-android uiautomator   selector=UiSelector().text("Art of Asia")
+  Execute Script    mobile: scroll  &{dic_arg}
+  Click Element    android=UiSelector().text("Art of Asia")
+
+  &{dic_arg}  Create Dictionary  strategy=-android uiautomator   selector=UiSelector().text("Southeast Asia")
+  Execute Script    mobile: scroll  &{dic_arg}
+  Click Element    android=UiSelector().text("Southeast Asia")
+
+  [Teardown]  Close Application
+
