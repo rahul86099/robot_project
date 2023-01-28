@@ -22,4 +22,3 @@ TC1 Get Pet
     Should Contain    ${response_body}    doggie
 
     Status Should Be    200
-    

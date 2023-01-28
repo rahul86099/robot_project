@@ -1,51 +1,390 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.9.13 on win32)" generated="20230127 12:09:54.119" rpa="false" schemaversion="3">
-<suite id="s1" name="Demo2" source="C:\Users\40032436\OneDrive - LTTS\Desktop\robot_project\api_suite\demo2.robot">
-<kw name="Create Session" library="RequestsLibrary" type="SETUP">
-<arg>alias=petshop</arg>
-<arg>url=https://petstore.swagger.io/v2</arg>
-<doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20230127 12:09:54.351" level="INFO">Creating Session using : alias=petshop, url=https://petstore.swagger.io/v2, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<status status="PASS" starttime="20230127 12:09:54.351" endtime="20230127 12:09:54.354"/>
+<robot generator="Robot 6.0.2 (Python 3.9.13 on win32)" generated="20230128 12:09:36.926" rpa="false" schemaversion="3">
+<suite id="s1" name="Caption project2" source="C:\Users\40032436\OneDrive - LTTS\Desktop\robot_project\appium_suite\Caption_project2.robot">
+<test id="s1-t1" name="TC1 Swipe" line="5">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>remote_url=http://localhost:4723/wd/hub</arg>
+<arg>platformName=android</arg>
+<arg>deviceName=samsung</arg>
+<arg>appActivity=com.adda247.modules.home.HomeActivity</arg>
+<arg>appPackage=com.adda247.app</arg>
+<arg>noReset=true</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" starttime="20230128 12:09:37.224" endtime="20230128 12:09:49.508"/>
 </kw>
-<test id="s1-t1" name="TC1 Get Pet" line="7">
-<kw name="GET On Session" library="RequestsLibrary">
-<var>${response}</var>
-<arg>alias=petshop</arg>
-<arg>url=pet/500239</arg>
-<doc>Sends a GET request on a previously created HTTP Session.</doc>
-<msg timestamp="20230127 12:09:56.200" level="INFO">GET Request : url=https://petstore.swagger.io/v2/pet/500239 
- path_url=/v2/pet/500239 
- headers={'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
- body=None 
- </msg>
-<msg timestamp="20230127 12:09:56.200" level="INFO">GET Response : url=https://petstore.swagger.io/v2/pet/500239 
- status=404, reason=Not Found 
- headers={'Date': 'Fri, 27 Jan 2023 06:39:55 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'} 
- body={"code":1,"type":"error","message":"Pet not found"} 
- </msg>
-<msg timestamp="20230127 12:09:56.200" level="INFO">C:\Users\40032436\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\connectionpool.py:1045: InsecureRequestWarning: Unverified HTTPS request is being made to host 'petstore.swagger.io'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
-  warnings.warn(</msg>
-<msg timestamp="20230127 12:09:56.200" level="FAIL">HTTPError: 404 Client Error: Not Found for url: https://petstore.swagger.io/v2/pet/500239</msg>
-<status status="FAIL" starttime="20230127 12:09:54.354" endtime="20230127 12:09:56.200"/>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text='STATE EXAMS']</arg>
+<arg>10s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20230128 12:09:50.146" level="INFO">xpath criteria: //android.widget.TextView[@text='STATE EXAMS']</msg>
+<status status="PASS" starttime="20230128 12:09:49.508" endtime="20230128 12:09:50.147"/>
 </kw>
-<kw name="Status Should Be" library="RequestsLibrary">
-<arg>200</arg>
-<doc>Fails if response status code is different than the expected.</doc>
-<status status="NOT RUN" starttime="20230127 12:09:56.200" endtime="20230127 12:09:56.200"/>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text='STATE EXAMS']</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230128 12:09:50.147" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='STATE EXAMS']'.</msg>
+<msg timestamp="20230128 12:09:51.587" level="INFO">xpath criteria: //android.widget.TextView[@text='STATE EXAMS']</msg>
+<status status="PASS" starttime="20230128 12:09:50.147" endtime="20230128 12:09:51.587"/>
 </kw>
-<status status="FAIL" starttime="20230127 12:09:54.354" endtime="20230127 12:09:56.200">HTTPError: 404 Client Error: Not Found for url: https://petstore.swagger.io/v2/pet/500239</status>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text='West Bengal']</arg>
+<arg>10s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20230128 12:09:51.751" level="INFO">xpath criteria: //android.widget.TextView[@text='West Bengal']</msg>
+<status status="PASS" starttime="20230128 12:09:51.587" endtime="20230128 12:09:51.751"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text='West Bengal']</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230128 12:09:51.751" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='West Bengal']'.</msg>
+<msg timestamp="20230128 12:09:53.631" level="INFO">xpath criteria: //android.widget.TextView[@text='West Bengal']</msg>
+<status status="PASS" starttime="20230128 12:09:51.751" endtime="20230128 12:09:53.631"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text='Hello']</arg>
+<arg>10s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20230128 12:09:53.734" level="INFO">xpath criteria: //android.widget.TextView[@text='Hello']</msg>
+<status status="PASS" starttime="20230128 12:09:53.631" endtime="20230128 12:09:53.734"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text='Hello']</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230128 12:09:53.734" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Hello']'.</msg>
+<msg timestamp="20230128 12:09:55.007" level="INFO">xpath criteria: //android.widget.TextView[@text='Hello']</msg>
+<status status="PASS" starttime="20230128 12:09:53.734" endtime="20230128 12:09:55.015"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text='Email/Phone']</arg>
+<arg>10s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20230128 12:09:55.121" level="INFO">xpath criteria: //android.widget.TextView[@text='Email/Phone']</msg>
+<status status="PASS" starttime="20230128 12:09:55.015" endtime="20230128 12:09:55.121"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text='Email/Phone']</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230128 12:09:55.129" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Email/Phone']'.</msg>
+<msg timestamp="20230128 12:09:56.659" level="INFO">xpath criteria: //android.widget.TextView[@text='Email/Phone']</msg>
+<status status="PASS" starttime="20230128 12:09:55.121" endtime="20230128 12:09:56.659"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text='Login']</arg>
+<arg>10s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20230128 12:09:56.780" level="INFO">xpath criteria: //android.widget.TextView[@text='Login']</msg>
+<status status="PASS" starttime="20230128 12:09:56.659" endtime="20230128 12:09:56.780"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text='Login']</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230128 12:09:56.780" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Login']'.</msg>
+<msg timestamp="20230128 12:09:57.414" level="INFO">xpath criteria: //android.widget.TextView[@text='Login']</msg>
+<status status="PASS" starttime="20230128 12:09:56.780" endtime="20230128 12:09:57.414"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text='Sign in with Google']</arg>
+<arg>10s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20230128 12:09:58.115" level="INFO">xpath criteria: //android.widget.TextView[@text='Sign in with Google']</msg>
+<status status="PASS" starttime="20230128 12:09:57.414" endtime="20230128 12:09:58.115"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text='Sign in with Google']</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230128 12:09:58.115" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Sign in with Google']'.</msg>
+<msg timestamp="20230128 12:09:59.719" level="INFO">xpath criteria: //android.widget.TextView[@text='Sign in with Google']</msg>
+<status status="PASS" starttime="20230128 12:09:58.115" endtime="20230128 12:09:59.719"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text='riji098721@gmail.com']</arg>
+<arg>30s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20230128 12:10:00.953" level="INFO">xpath criteria: //android.widget.TextView[@text='riji098721@gmail.com']
+xpath criteria: //android.widget.TextView[@text='riji098721@gmail.com']</msg>
+<status status="PASS" starttime="20230128 12:09:59.719" endtime="20230128 12:10:00.953"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text='riji098721@gmail.com']</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230128 12:10:00.953" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='riji098721@gmail.com']'.</msg>
+<msg timestamp="20230128 12:10:01.128" level="INFO">xpath criteria: //android.widget.TextView[@text='riji098721@gmail.com']</msg>
+<status status="PASS" starttime="20230128 12:10:00.953" endtime="20230128 12:10:01.128"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text='STUDY MATERIAL']</arg>
+<arg>10s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20230128 12:10:02.867" level="INFO">xpath criteria: //android.widget.TextView[@text='STUDY MATERIAL']
+xpath criteria: //android.widget.TextView[@text='STUDY MATERIAL']
+xpath criteria: //android.widget.TextView[@text='STUDY MATERIAL']</msg>
+<status status="PASS" starttime="20230128 12:10:01.128" endtime="20230128 12:10:02.867"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text='STUDY MATERIAL']</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230128 12:10:02.867" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='STUDY MATERIAL']'.</msg>
+<msg timestamp="20230128 12:10:03.058" level="INFO">xpath criteria: //android.widget.TextView[@text='STUDY MATERIAL']</msg>
+<status status="PASS" starttime="20230128 12:10:02.867" endtime="20230128 12:10:03.058"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text='Daily Quizzes']</arg>
+<arg>10s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20230128 12:10:07.290" level="INFO">xpath criteria: //android.widget.TextView[@text='Daily Quizzes']
+xpath criteria: //android.widget.TextView[@text='Daily Quizzes']
+xpath criteria: //android.widget.TextView[@text='Daily Quizzes']
+xpath criteria: //android.widget.TextView[@text='Daily Quizzes']
+xpath criteria: //android.widget.TextView[@text='Daily Quizzes']
+xpath criteria: //android.widget.TextView[@text='Daily Quizzes']</msg>
+<status status="PASS" starttime="20230128 12:10:03.058" endtime="20230128 12:10:07.290"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text='Daily Quizzes']</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230128 12:10:07.291" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='Daily Quizzes']'.</msg>
+<msg timestamp="20230128 12:10:08.111" level="INFO">xpath criteria: //android.widget.TextView[@text='Daily Quizzes']</msg>
+<status status="PASS" starttime="20230128 12:10:07.291" endtime="20230128 12:10:08.111"/>
+</kw>
+<kw name="Get Matching Xpath Count" library="AppiumLibrary">
+<var>${count}</var>
+<arg>xpath=//android.widget.TextView[@text='English Quiz: SSC MTS 25.01.2023']</arg>
+<doc>Returns number of elements matching ``xpath``</doc>
+<msg timestamp="20230128 12:10:08.814" level="INFO">xpath criteria: //android.widget.TextView[@text='English Quiz: SSC MTS 25.01.2023']</msg>
+<msg timestamp="20230128 12:10:08.814" level="INFO">${count} = 0</msg>
+<status status="PASS" starttime="20230128 12:10:08.111" endtime="20230128 12:10:08.814"/>
+</kw>
+<while condition="${count}==0">
+<iter>
+<kw name="Swipe By Percent" library="AppiumLibrary">
+<arg>90</arg>
+<arg>70</arg>
+<arg>90</arg>
+<arg>20</arg>
+<doc>Swipe from one percent of the screen to another percent, for an optional duration.
+Normal swipe fails to scale for different screen resolutions, this can be avoided using percent.</doc>
+<status status="PASS" starttime="20230128 12:10:08.814" endtime="20230128 12:10:10.162"/>
+</kw>
+<kw name="Get Matching Xpath Count" library="AppiumLibrary">
+<var>${count}</var>
+<arg>xpath=//android.widget.TextView[@text='English Quiz: SSC MTS 25.01.2023']</arg>
+<doc>Returns number of elements matching ``xpath``</doc>
+<msg timestamp="20230128 12:10:10.225" level="INFO">xpath criteria: //android.widget.TextView[@text='English Quiz: SSC MTS 25.01.2023']</msg>
+<msg timestamp="20230128 12:10:10.225" level="INFO">${count} = 0</msg>
+<status status="PASS" starttime="20230128 12:10:10.162" endtime="20230128 12:10:10.225"/>
+</kw>
+<status status="PASS" starttime="20230128 12:10:08.814" endtime="20230128 12:10:10.227"/>
+</iter>
+<iter>
+<kw name="Swipe By Percent" library="AppiumLibrary">
+<arg>90</arg>
+<arg>70</arg>
+<arg>90</arg>
+<arg>20</arg>
+<doc>Swipe from one percent of the screen to another percent, for an optional duration.
+Normal swipe fails to scale for different screen resolutions, this can be avoided using percent.</doc>
+<status status="PASS" starttime="20230128 12:10:10.227" endtime="20230128 12:10:11.565"/>
+</kw>
+<kw name="Get Matching Xpath Count" library="AppiumLibrary">
+<var>${count}</var>
+<arg>xpath=//android.widget.TextView[@text='English Quiz: SSC MTS 25.01.2023']</arg>
+<doc>Returns number of elements matching ``xpath``</doc>
+<msg timestamp="20230128 12:10:12.166" level="INFO">xpath criteria: //android.widget.TextView[@text='English Quiz: SSC MTS 25.01.2023']</msg>
+<msg timestamp="20230128 12:10:12.166" level="INFO">${count} = 0</msg>
+<status status="PASS" starttime="20230128 12:10:11.565" endtime="20230128 12:10:12.166"/>
+</kw>
+<status status="PASS" starttime="20230128 12:10:10.227" endtime="20230128 12:10:12.166"/>
+</iter>
+<iter>
+<kw name="Swipe By Percent" library="AppiumLibrary">
+<arg>90</arg>
+<arg>70</arg>
+<arg>90</arg>
+<arg>20</arg>
+<doc>Swipe from one percent of the screen to another percent, for an optional duration.
+Normal swipe fails to scale for different screen resolutions, this can be avoided using percent.</doc>
+<status status="PASS" starttime="20230128 12:10:12.166" endtime="20230128 12:10:13.500"/>
+</kw>
+<kw name="Get Matching Xpath Count" library="AppiumLibrary">
+<var>${count}</var>
+<arg>xpath=//android.widget.TextView[@text='English Quiz: SSC MTS 25.01.2023']</arg>
+<doc>Returns number of elements matching ``xpath``</doc>
+<msg timestamp="20230128 12:10:14.330" level="INFO">xpath criteria: //android.widget.TextView[@text='English Quiz: SSC MTS 25.01.2023']</msg>
+<msg timestamp="20230128 12:10:14.330" level="INFO">${count} = 0</msg>
+<status status="PASS" starttime="20230128 12:10:13.500" endtime="20230128 12:10:14.330"/>
+</kw>
+<status status="PASS" starttime="20230128 12:10:12.166" endtime="20230128 12:10:14.330"/>
+</iter>
+<iter>
+<kw name="Swipe By Percent" library="AppiumLibrary">
+<arg>90</arg>
+<arg>70</arg>
+<arg>90</arg>
+<arg>20</arg>
+<doc>Swipe from one percent of the screen to another percent, for an optional duration.
+Normal swipe fails to scale for different screen resolutions, this can be avoided using percent.</doc>
+<status status="PASS" starttime="20230128 12:10:14.330" endtime="20230128 12:10:15.679"/>
+</kw>
+<kw name="Get Matching Xpath Count" library="AppiumLibrary">
+<var>${count}</var>
+<arg>xpath=//android.widget.TextView[@text='English Quiz: SSC MTS 25.01.2023']</arg>
+<doc>Returns number of elements matching ``xpath``</doc>
+<msg timestamp="20230128 12:10:16.226" level="INFO">xpath criteria: //android.widget.TextView[@text='English Quiz: SSC MTS 25.01.2023']</msg>
+<msg timestamp="20230128 12:10:16.226" level="INFO">${count} = 0</msg>
+<status status="PASS" starttime="20230128 12:10:15.679" endtime="20230128 12:10:16.226"/>
+</kw>
+<status status="PASS" starttime="20230128 12:10:14.330" endtime="20230128 12:10:16.242"/>
+</iter>
+<iter>
+<kw name="Swipe By Percent" library="AppiumLibrary">
+<arg>90</arg>
+<arg>70</arg>
+<arg>90</arg>
+<arg>20</arg>
+<doc>Swipe from one percent of the screen to another percent, for an optional duration.
+Normal swipe fails to scale for different screen resolutions, this can be avoided using percent.</doc>
+<status status="PASS" starttime="20230128 12:10:16.242" endtime="20230128 12:10:17.587"/>
+</kw>
+<kw name="Get Matching Xpath Count" library="AppiumLibrary">
+<var>${count}</var>
+<arg>xpath=//android.widget.TextView[@text='English Quiz: SSC MTS 25.01.2023']</arg>
+<doc>Returns number of elements matching ``xpath``</doc>
+<msg timestamp="20230128 12:10:18.144" level="INFO">xpath criteria: //android.widget.TextView[@text='English Quiz: SSC MTS 25.01.2023']</msg>
+<msg timestamp="20230128 12:10:18.144" level="INFO">${count} = 0</msg>
+<status status="PASS" starttime="20230128 12:10:17.587" endtime="20230128 12:10:18.144"/>
+</kw>
+<status status="PASS" starttime="20230128 12:10:16.242" endtime="20230128 12:10:18.144"/>
+</iter>
+<iter>
+<kw name="Swipe By Percent" library="AppiumLibrary">
+<arg>90</arg>
+<arg>70</arg>
+<arg>90</arg>
+<arg>20</arg>
+<doc>Swipe from one percent of the screen to another percent, for an optional duration.
+Normal swipe fails to scale for different screen resolutions, this can be avoided using percent.</doc>
+<status status="PASS" starttime="20230128 12:10:18.144" endtime="20230128 12:10:19.474"/>
+</kw>
+<kw name="Get Matching Xpath Count" library="AppiumLibrary">
+<var>${count}</var>
+<arg>xpath=//android.widget.TextView[@text='English Quiz: SSC MTS 25.01.2023']</arg>
+<doc>Returns number of elements matching ``xpath``</doc>
+<msg timestamp="20230128 12:10:20.032" level="INFO">xpath criteria: //android.widget.TextView[@text='English Quiz: SSC MTS 25.01.2023']</msg>
+<msg timestamp="20230128 12:10:20.032" level="INFO">${count} = 0</msg>
+<status status="PASS" starttime="20230128 12:10:19.474" endtime="20230128 12:10:20.032"/>
+</kw>
+<status status="PASS" starttime="20230128 12:10:18.144" endtime="20230128 12:10:20.032"/>
+</iter>
+<iter>
+<kw name="Swipe By Percent" library="AppiumLibrary">
+<arg>90</arg>
+<arg>70</arg>
+<arg>90</arg>
+<arg>20</arg>
+<doc>Swipe from one percent of the screen to another percent, for an optional duration.
+Normal swipe fails to scale for different screen resolutions, this can be avoided using percent.</doc>
+<status status="PASS" starttime="20230128 12:10:20.032" endtime="20230128 12:10:21.366"/>
+</kw>
+<kw name="Get Matching Xpath Count" library="AppiumLibrary">
+<var>${count}</var>
+<arg>xpath=//android.widget.TextView[@text='English Quiz: SSC MTS 25.01.2023']</arg>
+<doc>Returns number of elements matching ``xpath``</doc>
+<msg timestamp="20230128 12:10:23.156" level="INFO">xpath criteria: //android.widget.TextView[@text='English Quiz: SSC MTS 25.01.2023']</msg>
+<msg timestamp="20230128 12:10:23.166" level="INFO">${count} = 0</msg>
+<status status="PASS" starttime="20230128 12:10:21.366" endtime="20230128 12:10:23.166"/>
+</kw>
+<status status="PASS" starttime="20230128 12:10:20.032" endtime="20230128 12:10:23.166"/>
+</iter>
+<iter>
+<kw name="Swipe By Percent" library="AppiumLibrary">
+<arg>90</arg>
+<arg>70</arg>
+<arg>90</arg>
+<arg>20</arg>
+<doc>Swipe from one percent of the screen to another percent, for an optional duration.
+Normal swipe fails to scale for different screen resolutions, this can be avoided using percent.</doc>
+<status status="PASS" starttime="20230128 12:10:23.166" endtime="20230128 12:10:24.507"/>
+</kw>
+<kw name="Get Matching Xpath Count" library="AppiumLibrary">
+<var>${count}</var>
+<arg>xpath=//android.widget.TextView[@text='English Quiz: SSC MTS 25.01.2023']</arg>
+<doc>Returns number of elements matching ``xpath``</doc>
+<msg timestamp="20230128 12:10:26.135" level="INFO">xpath criteria: //android.widget.TextView[@text='English Quiz: SSC MTS 25.01.2023']</msg>
+<msg timestamp="20230128 12:10:26.140" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20230128 12:10:24.507" endtime="20230128 12:10:26.140"/>
+</kw>
+<status status="PASS" starttime="20230128 12:10:23.166" endtime="20230128 12:10:26.140"/>
+</iter>
+<status status="PASS" starttime="20230128 12:10:08.814" endtime="20230128 12:10:26.140"/>
+</while>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text='English Quiz: SSC MTS 25.01.2023']</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230128 12:10:26.140" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='English Quiz: SSC MTS 25.01.2023']'.</msg>
+<msg timestamp="20230128 12:10:26.368" level="INFO">xpath criteria: //android.widget.TextView[@text='English Quiz: SSC MTS 25.01.2023']</msg>
+<status status="PASS" starttime="20230128 12:10:26.140" endtime="20230128 12:10:26.369"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text='ATTEMPT']</arg>
+<arg>10s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20230128 12:10:35.190" level="INFO">xpath criteria: //android.widget.TextView[@text='ATTEMPT']
+xpath criteria: //android.widget.TextView[@text='ATTEMPT']
+xpath criteria: //android.widget.TextView[@text='ATTEMPT']
+xpath criteria: //android.widget.TextView[@text='ATTEMPT']
+xpath criteria: //android.widget.TextView[@text='ATTEMPT']
+xpath criteria: //android.widget.TextView[@text='ATTEMPT']
+xpath criteria: //android.widget.TextView[@text='ATTEMPT']
+xpath criteria: //android.widget.TextView[@text='ATTEMPT']</msg>
+<status status="PASS" starttime="20230128 12:10:26.369" endtime="20230128 12:10:35.190"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=//android.widget.TextView[@text='ATTEMPT']</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230128 12:10:35.190" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text='ATTEMPT']'.</msg>
+<msg timestamp="20230128 12:10:35.441" level="INFO">xpath criteria: //android.widget.TextView[@text='ATTEMPT']</msg>
+<status status="PASS" starttime="20230128 12:10:35.190" endtime="20230128 12:10:35.441"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>xpath=//*[contains(@text,'following')]</arg>
+<arg>30s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20230128 12:11:05.876" level="INFO">xpath criteria: //*[contains(@text,'following')]
+xpath criteria: //*[contains(@text,'following')]
+xpath criteria: //*[contains(@text,'following')]
+xpath criteria: //*[contains(@text,'following')]</msg>
+<status status="PASS" starttime="20230128 12:10:35.441" endtime="20230128 12:11:05.876"/>
+</kw>
+<kw name="Element Should Contain Text" library="AppiumLibrary">
+<arg>xpath=//*[contains(@text,'following')]</arg>
+<arg>following instructions</arg>
+<doc>Verifies element identified by ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230128 12:11:05.876" level="INFO">Verifying element 'xpath=//*[contains(@text,'following')]' contains text 'following instructions'.</msg>
+<msg timestamp="20230128 12:11:06.488" level="INFO">xpath criteria: //*[contains(@text,'following')]</msg>
+<status status="PASS" starttime="20230128 12:11:05.876" endtime="20230128 12:11:06.488"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary" type="TEARDOWN">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20230128 12:11:06.488" endtime="20230128 12:11:07.136"/>
+</kw>
+<status status="PASS" starttime="20230128 12:09:37.224" endtime="20230128 12:11:07.137"/>
 </test>
-<status status="FAIL" starttime="20230127 12:09:54.131" endtime="20230127 12:09:56.200"/>
+<status status="PASS" starttime="20230128 12:09:36.930" endtime="20230128 12:11:07.140"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Demo2">Demo2</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Caption project2">Caption project2</stat>
 </suite>
 </statistics>
 <errors>
