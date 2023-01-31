@@ -42,7 +42,7 @@ TC1 Swipe
       Swipe By Percent    90    70    90    20
       ${count}  Get Matching Xpath Count    xpath=//android.widget.TextView[@text='English Quiz: SSC MTS 25.01.2023']
   END
-
+  
   Click Element    xpath=//android.widget.TextView[@text='English Quiz: SSC MTS 25.01.2023']
 
   Wait Until Page Contains Element    xpath=//android.widget.TextView[@text='ATTEMPT']  10s

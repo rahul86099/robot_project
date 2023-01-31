@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.9.13 on win32)" generated="20230131 11:47:20.638" rpa="false" schemaversion="3">
+<suite id="s1" name="Add To Cart Register Suit" source="C:\Users\40032436\OneDrive - LTTS\Desktop\robot_project\Caption Project\Caption_project_1\2__register_suite\1__add_to_cart_register_suit.robot">
+<test id="s1-t1" name="TC1" line="12">
+<kw name="Launch Browser and Navigate to Url" library="common_functionalities" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER_NAME}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230131 11:47:22.081" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20230131 11:47:22.081" endtime="20230131 11:47:23.829"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230131 11:47:23.830" endtime="20230131 11:47:23.961"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>30s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20230131 11:47:23.961" endtime="20230131 11:47:23.964"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230131 11:47:23.965" level="INFO">Opening url 'https://www.ajio.com/'</msg>
+<status status="PASS" starttime="20230131 11:47:23.965" endtime="20230131 11:47:31.958"/>
+</kw>
+<status status="PASS" starttime="20230131 11:47:22.059" endtime="20230131 11:47:31.959"/>
+</kw>
+<kw name="Vaalid Register Template">
+<arg>rmyaduvanshi2@gmail.com</arg>
+<arg>Rahul123@</arg>
+<arg>Campus Sutra</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//span[text()='Sign In / Join AJIO']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230131 11:47:31.962" level="INFO">Clicking element 'xpath=//span[text()='Sign In / Join AJIO']'.</msg>
+<status status="PASS" starttime="20230131 11:47:31.960" endtime="20230131 11:47:32.261"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230131 11:47:32.264" level="INFO">Typing text 'rmyaduvanshi2@gmail.com' into text field 'name=username'.</msg>
+<status status="PASS" starttime="20230131 11:47:32.262" endtime="20230131 11:47:32.555"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//input[@type='submit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230131 11:47:32.560" level="INFO">Clicking element 'xpath=//input[@type='submit']'.</msg>
+<status status="PASS" starttime="20230131 11:47:32.557" endtime="20230131 11:47:32.778"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//input[@type='button']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230131 11:47:32.779" level="INFO">Clicking element 'xpath=//input[@type='button']'.</msg>
+<status status="PASS" starttime="20230131 11:47:32.779" endtime="20230131 11:47:34.055"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>30s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230131 11:48:04.057" level="INFO">Slept 30 seconds</msg>
+<status status="PASS" starttime="20230131 11:47:34.055" endtime="20230131 11:48:04.058"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=pwdInput</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230131 11:48:04.058" level="INFO">Typing text 'Rahul123@' into text field 'id=pwdInput'.</msg>
+<status status="PASS" starttime="20230131 11:48:04.058" endtime="20230131 11:48:04.244"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>30s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230131 11:48:34.256" level="INFO">Slept 30 seconds</msg>
+<status status="PASS" starttime="20230131 11:48:04.245" endtime="20230131 11:48:34.257"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//input[@type='submit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230131 11:48:34.257" level="INFO">Clicking element 'xpath=//input[@type='submit']'.</msg>
+<status status="PASS" starttime="20230131 11:48:34.257" endtime="20230131 11:48:34.448"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>link=MEN</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20230131 11:48:34.450" level="INFO">Simulating Mouse Over on element 'link=MEN'.</msg>
+<status status="PASS" starttime="20230131 11:48:34.449" endtime="20230131 11:48:35.027"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>link=Jackets &amp; Coats</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230131 11:48:35.028" level="INFO">Clicking element 'link=Jackets &amp; Coats'.</msg>
+<status status="PASS" starttime="20230131 11:48:35.028" endtime="20230131 11:48:42.136"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//div[text()='Sleeveless High-Neck Bomber Jacket with Detachable Hood']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230131 11:48:42.138" level="INFO">Clicking element 'xpath=//div[text()='Sleeveless High-Neck Bomber Jacket with Detachable Hood']'.</msg>
+<status status="PASS" starttime="20230131 11:48:42.137" endtime="20230131 11:48:42.796"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>Buy Black Jackets &amp; Coats for Men by Fort Collins Online | Ajio.com</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20230131 11:48:42.797" endtime="20230131 11:48:45.336"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//span[text()='L']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230131 11:48:45.338" level="INFO">Clicking element 'xpath=//span[text()='L']'.</msg>
+<status status="PASS" starttime="20230131 11:48:45.337" endtime="20230131 11:48:45.533"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//div[@class='btn-gold']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230131 11:48:45.535" level="INFO">Clicking element 'xpath=//div[@class='btn-gold']'.</msg>
+<status status="PASS" starttime="20230131 11:48:45.534" endtime="20230131 11:48:45.662"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>MAIN</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20230131 11:48:45.663" endtime="20230131 11:48:45.682"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//div[text()='Hooded Quilted Jacket']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230131 11:48:45.683" level="INFO">Clicking element 'xpath=//div[text()='Hooded Quilted Jacket']'.</msg>
+<status status="PASS" starttime="20230131 11:48:45.682" endtime="20230131 11:48:45.863"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>Buy Black Jackets &amp; Coats for Men by Campus Sutra Online | Ajio.com</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20230131 11:48:45.863" endtime="20230131 11:48:48.271"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//span[text()='L']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230131 11:48:48.274" level="INFO">Clicking element 'xpath=//span[text()='L']'.</msg>
+<status status="PASS" starttime="20230131 11:48:48.273" endtime="20230131 11:48:48.511"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//div[@class='btn-gold']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230131 11:48:48.513" level="INFO">Clicking element 'xpath=//div[@class='btn-gold']'.</msg>
+<status status="PASS" starttime="20230131 11:48:48.511" endtime="20230131 11:48:48.641"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>MAIN</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20230131 11:48:48.642" endtime="20230131 11:48:48.671"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//div[@class='ic-cart ']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230131 11:48:48.675" level="INFO">Clicking element 'xpath=//div[@class='ic-cart ']'.</msg>
+<status status="PASS" starttime="20230131 11:48:48.673" endtime="20230131 11:48:50.201"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath=//*[contains(text(),'Campus Sutra')][1]</arg>
+<arg>${expected_header}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230131 11:48:50.267" level="INFO">Element 'xpath=//*[contains(text(),'Campus Sutra')][1]' contains text 'Campus Sutra'.</msg>
+<status status="PASS" starttime="20230131 11:48:50.202" endtime="20230131 11:48:50.267"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230131 11:48:50.267" endtime="20230131 11:48:56.879"/>
+</kw>
+<status status="PASS" starttime="20230131 11:47:31.959" endtime="20230131 11:48:56.879"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230131 11:48:56.879" endtime="20230131 11:48:56.879"/>
+</kw>
+<status status="PASS" starttime="20230131 11:47:22.059" endtime="20230131 11:48:56.879"/>
+</test>
+<test id="s1-t2" name="TC1" line="12">
+<kw name="Launch Browser and Navigate to Url" library="common_functionalities" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER_NAME}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230131 11:48:56.885" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20230131 11:48:56.885" endtime="20230131 11:48:58.608"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230131 11:48:58.609" endtime="20230131 11:48:58.737"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>30s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20230131 11:48:58.739" endtime="20230131 11:48:58.743"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230131 11:48:58.745" level="INFO">Opening url 'https://www.ajio.com/'</msg>
+<status status="PASS" starttime="20230131 11:48:58.744" endtime="20230131 11:49:05.626"/>
+</kw>
+<status status="PASS" starttime="20230131 11:48:56.885" endtime="20230131 11:49:05.627"/>
+</kw>
+<kw name="Vaalid Register Template">
+<arg>Campus Sutra</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//span[text()='Sign In / Join AJIO']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230131 11:49:05.630" level="INFO">Clicking element 'xpath=//span[text()='Sign In / Join AJIO']'.</msg>
+<status status="PASS" starttime="20230131 11:49:05.629" endtime="20230131 11:49:05.898"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230131 11:49:05.900" level="INFO">Typing text '' into text field 'name=username'.</msg>
+<status status="PASS" starttime="20230131 11:49:05.898" endtime="20230131 11:49:06.045"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//input[@type='submit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230131 11:49:06.047" level="INFO">Clicking element 'xpath=//input[@type='submit']'.</msg>
+<status status="PASS" starttime="20230131 11:49:06.046" endtime="20230131 11:49:06.282"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//input[@type='button']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230131 11:49:06.284" level="INFO">Clicking element 'xpath=//input[@type='button']'.</msg>
+<msg timestamp="20230131 11:49:07.683" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=109.0.5414.120)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x009F6643]
+	(No symbol) [0x0098BE21]
+	(No symbol) [0x0088DA9D]
+	(No symbol) [0x0086EF6A]
+	(No symbol) [0x008E3AAB]
+	(No symbol) [0x008F61B6]
+	(No symbol) [0x008DFB76]
+	(No symbol) [0x008B49C1]
+	(No symbol) [0x008B5E5D]
+	GetHandleVerifier [0x00C6A142+2497106]
+	GetHandleVerifier [0x00C985D3+2686691]
+	GetHandleVerifier [0x00C9BB9C+2700460]
+	GetHandleVerifier [0x00AA3B10+635936]
+	(No symbol) [0x00994A1F]
+	(No symbol) [0x0099A418]
+	(No symbol) [0x0099A505]
+	(No symbol) [0x009A508B]
+	BaseThreadInitThunk [0x75A6FEF9+25]
+	RtlGetAppContainerNamedObjectPath [0x77257BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x77257B8E+238]
+</msg>
+<msg timestamp="20230131 11:49:07.685" level="FAIL">Element with locator 'xpath=//input[@type='button']' not found.</msg>
+<status status="FAIL" starttime="20230131 11:49:06.283" endtime="20230131 11:49:07.698"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>30s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230131 11:49:07.698" endtime="20230131 11:49:07.699"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=pwdInput</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230131 11:49:07.699" endtime="20230131 11:49:07.699"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>30s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230131 11:49:07.699" endtime="20230131 11:49:07.699"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//input[@type='submit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230131 11:49:07.699" endtime="20230131 11:49:07.701"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>link=MEN</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="NOT RUN" starttime="20230131 11:49:07.702" endtime="20230131 11:49:07.702"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>link=Jackets &amp; Coats</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230131 11:49:07.707" endtime="20230131 11:49:07.707"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//div[text()='Sleeveless High-Neck Bomber Jacket with Detachable Hood']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230131 11:49:07.708" endtime="20230131 11:49:07.708"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>Buy Black Jackets &amp; Coats for Men by Fort Collins Online | Ajio.com</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="NOT RUN" starttime="20230131 11:49:07.708" endtime="20230131 11:49:07.709"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//span[text()='L']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230131 11:49:07.709" endtime="20230131 11:49:07.710"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//div[@class='btn-gold']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230131 11:49:07.712" endtime="20230131 11:49:07.713"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>MAIN</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="NOT RUN" starttime="20230131 11:49:07.713" endtime="20230131 11:49:07.714"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//div[text()='Hooded Quilted Jacket']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230131 11:49:07.714" endtime="20230131 11:49:07.715"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>Buy Black Jackets &amp; Coats for Men by Campus Sutra Online | Ajio.com</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="NOT RUN" starttime="20230131 11:49:07.715" endtime="20230131 11:49:07.716"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//span[text()='L']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230131 11:49:07.716" endtime="20230131 11:49:07.716"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//div[@class='btn-gold']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230131 11:49:07.717" endtime="20230131 11:49:07.717"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>MAIN</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="NOT RUN" starttime="20230131 11:49:07.718" endtime="20230131 11:49:07.718"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//div[@class='ic-cart ']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230131 11:49:07.718" endtime="20230131 11:49:07.719"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath=//*[contains(text(),'Campus Sutra')][1]</arg>
+<arg>${expected_header}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="NOT RUN" starttime="20230131 11:49:07.719" endtime="20230131 11:49:07.720"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="NOT RUN" starttime="20230131 11:49:07.721" endtime="20230131 11:49:07.721"/>
+</kw>
+<status status="FAIL" starttime="20230131 11:49:05.628" endtime="20230131 11:49:07.722"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230131 11:49:07.723" endtime="20230131 11:49:10.005"/>
+</kw>
+<status status="FAIL" starttime="20230131 11:48:56.879" endtime="20230131 11:49:10.005">Element with locator 'xpath=//input[@type='button']' not found.</status>
+</test>
+<doc>This file contains test case related to invalid login</doc>
+<status status="FAIL" starttime="20230131 11:47:20.643" endtime="20230131 11:49:10.005"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Add To Cart Register Suit">Add To Cart Register Suit</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230131 11:48:56.879" level="WARN">Multiple tests with name 'TC1' executed in suite 'Add To Cart Register Suit'.</msg>
+<msg timestamp="20230131 11:49:07.683" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=109.0.5414.120)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x009F6643]
+	(No symbol) [0x0098BE21]
+	(No symbol) [0x0088DA9D]
+	(No symbol) [0x0086EF6A]
+	(No symbol) [0x008E3AAB]
+	(No symbol) [0x008F61B6]
+	(No symbol) [0x008DFB76]
+	(No symbol) [0x008B49C1]
+	(No symbol) [0x008B5E5D]
+	GetHandleVerifier [0x00C6A142+2497106]
+	GetHandleVerifier [0x00C985D3+2686691]
+	GetHandleVerifier [0x00C9BB9C+2700460]
+	GetHandleVerifier [0x00AA3B10+635936]
+	(No symbol) [0x00994A1F]
+	(No symbol) [0x0099A418]
+	(No symbol) [0x0099A505]
+	(No symbol) [0x009A508B]
+	BaseThreadInitThunk [0x75A6FEF9+25]
+	RtlGetAppContainerNamedObjectPath [0x77257BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x77257B8E+238]
+</msg>
+</errors>
+</robot>
